@@ -3,7 +3,7 @@
 '''
 class AddContact:
 
-    def __add_name__(self, name, num):
+    def __addName__(self, name, num):
         list_1 = reade()
         saves = input('Создать контакт?\nда-1\nнет-2\n ')
         list_2 =[]

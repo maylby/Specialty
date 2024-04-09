@@ -1,6 +1,12 @@
+# Промежуточная контрольная работа по блоку специализация
+# Урок 1. Приложение заметки (Python)
+# https://gb.ru/lessons/432765/homework
+
+
 '''
 Редактор
 '''
+
 class Redactor:
     
     def __redact__(self, find, num): 
