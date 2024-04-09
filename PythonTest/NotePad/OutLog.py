@@ -6,8 +6,9 @@
 '''
 "Выйти/Продолжить"
 '''
-class OutLog(object):
-    def outlog():
+class OutLog:
+
+    def __outlog__(self, picachu):
         picachu = input('\nПродолжить?\n1-да,\n2-нет\n: ')
         if picachu == '1': 
             start() # меню выбора действий

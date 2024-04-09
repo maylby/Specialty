@@ -5,13 +5,13 @@
 '''
 Поиск
 '''
-class FindName(object):
+class FindName:
 
-    def find_name():
+    def __findName__(self, name, nike):
         list_1 = reade() # чтение найденных данных
         name = input('Введите ФИО: ')
         filde = list(filter(lambda x: name in x[0], list_1))
-        if len(filde):# != 0:
+        if len(filde): # != 0:
             for i in filde:
                 print(i)
                 outlog()
