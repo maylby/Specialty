@@ -6,7 +6,7 @@
 '''
 "Выйти/Продолжить"
 '''
-class OutLog:
+class Outlog:
 
     def __outlog__(self, picachu):
         picachu = input('\nПродолжить?\n1-да,\n2-нет\n: ')
