@@ -7,7 +7,7 @@
 '''
 class Reading:
 	
-    def reade(): 
+    def __reade__(): 
         spros = []
         with open('phonebook.txt','r', encoding='utf-8') as Phone:
             for i in Phone.readlines():

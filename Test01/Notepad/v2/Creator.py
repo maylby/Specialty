@@ -8,7 +8,7 @@
 '''
 class Creator:
     
-    def create(list_1):
+    def __create__(list_1):
         listes = list_1
         with open('phonebook.txt','w+', encoding='utf-8') as Phone:
             for i in listes:
