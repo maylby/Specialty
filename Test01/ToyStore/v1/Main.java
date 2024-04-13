@@ -1,5 +1,13 @@
 package Specialization.Test01.ToyStore.v1;
 
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeMap;
+
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,7 +21,7 @@ public class Main {
         Set<Orders> filterOrders = new HashSet<>(orders);
         printOrders(filterOrders);
         int choice = chooseMainOptions();
-        while (choice != 9) { // "вместо "9" вставить (?) "orders.length()" или "case.length"
+        while (choice != case.length) { // "вместо "9" вставить (?) "orders.length()" или "case.length"
 			      // Bыяснить как в Map считают количество сохранённых заказов???
             switch (choice) {
                 case 1:
