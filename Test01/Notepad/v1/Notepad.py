@@ -9,7 +9,6 @@
 читать список заметок, редактировать заметку, удалять заметку.
 
 
-
 "Вход/Выход"
 '''
 def outlog():
@@ -22,7 +21,6 @@ def outlog():
 	else: 
 		print('Введена не верная команда')
 		outlog()
-
 
 
 '''
@@ -46,7 +44,6 @@ def find_name():
 			print('Введена не верная команда')
 			outlog()
 # find_name()
-
 
 
 '''
@@ -124,7 +121,6 @@ def redact():
 	outlog()	
 
 
-
 '''
 Добавить контакт 
 '''
@@ -152,7 +148,6 @@ def add_name():
 	# print(list_1)
 
 
-
 '''
 Создание новой записи
 '''
@@ -166,7 +161,6 @@ def create(list_1):
 # create()
 
 
-
 '''
 Чтение
 '''
@@ -178,7 +172,6 @@ def reade():
 	return (note)
 # note = reade()
 print(reade())
-
 
 
 '''
