@@ -1,5 +1,15 @@
+/*
+ * Промежуточная контрольная работа по блоку специализация
+ * онлайн-магазина детских игрушек
+ * https://gb.ru/lessons/432765/homework
+ */
+
 package Specialization.Test01.ToyStore.v1;
 
+/*
+ * ProductData
+ * (перечень представленных товаров по разделам)
+ */
 public class ProductData {
     static Set<Orders> createOrdersSet() {
 

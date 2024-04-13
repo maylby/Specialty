@@ -1,3 +1,8 @@
+/*
+ * Промежуточная контрольная работа по блоку специализация
+ * онлайн-магазина детских игрушек
+ * https://gb.ru/lessons/432765/homework
+ */
 package Specialization.Test01.ToyStore.v1;
 
 import java.util.*; 
@@ -52,14 +57,8 @@ public class Orders {
     public void setPrice(int price) {
         this.price = price;
     }
-/*
-                "1. SoftToys (Мягкая игрушка)\n" +
-                "2. Dolls (куклы)\n" +
-                "3. BoardGames (настольные игры)\n" +
-                "4. Constructors (конструкторы)\n" +
-                "5. Weapons (оружие)\n" +
-*/
-    public Laptops(String softToy, String doll, String boardGame, 
+
+    public Orders(String softToy, String doll, String boardGame, 
 		   String constructor, String weapons, int price ) {
 
         this.softToy = softToy;

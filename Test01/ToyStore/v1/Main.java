@@ -1,5 +1,6 @@
 /*
  * Промежуточная контрольная работа по блоку специализация
+ * Программа для онлайн-магазина детских игрушек. 
  * https://gb.ru/lessons/432765/homework
  */
 package Specialization.Test01.ToyStore.v1;
@@ -12,8 +13,9 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /*
- * Программа для онлайн-магазина детских игрушек. 
- * Реализовать в java.
+ * Main
+ * пользовательское приложение
+ * составление списка заказов
  */
 public class Main {
 
