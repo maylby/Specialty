@@ -1,3 +1,7 @@
+/*
+ * Промежуточная контрольная работа по блоку специализация
+ * https://gb.ru/lessons/432765/homework
+ */
 package Specialization.Test01.ToyStore.v1;
 
 import java.util.HashSet;
@@ -7,7 +11,10 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TreeMap;
 
-
+/*
+ * Программа для онлайн-магазина детских игрушек. 
+ * Реализовать в java.
+ */
 public class Main {
 
     public static void main(String[] args) {
