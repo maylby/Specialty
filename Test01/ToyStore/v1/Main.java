@@ -21,8 +21,8 @@ public class Main {
         Set<Orders> filterOrders = new HashSet<>(orders);
         printOrders(filterOrders);
         int choice = chooseMainOptions();
-        while (choice != case.length) { // "вместо "9" вставить (?) "orders.length()" или "case.length"
-			      // Bыяснить как в Map считают количество сохранённых заказов???
+        while (choice != case.length) { // "вместо числа пунктов вставить (?) 
+                                        // "orders.length" или "case.length"
             switch (choice) {
                 case 1:
                     System.out.println("filter - SoftToys"); // мягкая игрушка
@@ -45,11 +45,11 @@ public class Main {
                     filterWeapons(filterOrders);
                     break;
                 case 6:
-                    System.out.println("filter - price"); // цена
+                    System.out.println("filter - price"); // ценник
                     filterPrice(filterOrders);
                     break;
-                case 6:
-                    filterOrders.addAll(orders); // весь заказ
+                case 7:
+                    filterOrders.addAll(orders);
                     break;
                 default:
                     System.out.println("Некорректный аргумент");

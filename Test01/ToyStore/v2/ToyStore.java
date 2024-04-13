@@ -15,7 +15,8 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /*
- * Разработать программу для онлайн-магазина детских игрушек. 
+ * "ToyStore"
+ * Программа для онлайн-магазина детских игрушек. 
  * Реализовать в java.
  */
 public class ToyStore {
@@ -58,7 +59,7 @@ public class ToyStore {
                     System.out.println("filter - price"); // цена
                     filterPrice(filterOrders);
                     break;
-                case 6:
+                case 7:
                     filterOrders.addAll(orders); // весь заказ
                     break;
                 default:
