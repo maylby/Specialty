@@ -25,7 +25,7 @@ class Redactor:
                 if uno == '1':
                     list_1[list_1.index(i)][0] = input('ФИО: ') # Разделить имя и фамилию (?)
                 elif uno == '2':
-                    list_1[list_1.index(j)][1] = input('Телефон: ')
+                    list_1[list_1.index(i)][1] = input('Телефон: ')
                 else: 
                     print('Введена неверная команда')
                     redact() 			
