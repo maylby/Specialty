@@ -14,7 +14,7 @@
 def outlog():
 	picachu = input('\nПродолжить?\n1-да,\n2-нет\n: ')
 	if picachu == '1': 
-		start() # меню выбора действий
+		start() 
 	elif picachu == '2':
 		print('Пока!\n')
 		exit() 
@@ -27,7 +27,7 @@ def outlog():
 Поиск
 '''
 def find_name():
-	list_1 = reade() # чтение найденных данных
+	list_1 = reade() 
 	name = input('Введите ФИО: ')
 	filde = list(filter(lambda x: name in x[0], list_1))
 	if len(filde):# != 0:
@@ -157,7 +157,7 @@ def create(list_1):
 		for i in listes:
 			Phone.write(f'{i[0]},{i[1]}\n') # ФИО: 'i[0]', номер: 'i[1]'
 		list_1 += listes
-	return list_1 # добавил возврат 'list_1'
+	return list_1 
 # create()
 
 
