@@ -14,4 +14,4 @@ class Reading:
                 spros.append(i.strip().split(',')) 	
         return (spros)
     # spros = reade()
-    print(reade())
+    # print(reade())
