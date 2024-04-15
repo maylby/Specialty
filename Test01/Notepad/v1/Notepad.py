@@ -171,7 +171,7 @@ def reade():
 			note.append(i.strip().split(',')) 	
 	return (note)
 # note = reade()
-print(reade())
+# print(reade()) # закрыл строку за ненадобностью
 
 
 '''
