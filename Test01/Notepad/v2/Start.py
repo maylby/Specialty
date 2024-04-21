@@ -7,11 +7,7 @@ Mеню пуск
 '''
 class Start:
 
-    def __start__(): # В момент запуска, одновременно со списком пунктов, 
-                # код выдаёт список контактов. Как исправить?
-        
-        # data = show_menu() # Функция меню команд v2, данный код не работает (?),
-                            # вызов пунктов меню - через "input()"
+    def __start__():  
 
         data = input("\nВыбрать действие:\n"
                     "1. Показать список контактов\n"
@@ -19,16 +15,19 @@ class Start:
                     "3. Добавить контакт\n"
                     "4. Редактировать контакт\n"
                     "5. Удалить\n") 
+        
         if data == '1': 
             # reade() # прямая ссылка на функцию работает криво
-            spros = reade()
-            print(*spros, sep ='\n')
+            note = read()
+            print(*note, sep ='\n')
             outlog()
         elif data == '2': 
-            findName()
+            find_name()
         elif data == '3': 
-            addName()
+            add_name()
         elif data == '4': 
             redact()
         elif data == '5': 
             delete()
+
+    # start()

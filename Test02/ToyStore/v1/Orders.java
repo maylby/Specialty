@@ -3,7 +3,7 @@
  * онлайн-магазина детских игрушек
  * https://gb.ru/lessons/432765/homework
  */
-package Specialization.Test01.ToyStore.v1;
+package Specialization.Test02.ToyStore.v1;
 
 import java.util.*; 
 import java.util.Objects;

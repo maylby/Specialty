@@ -9,10 +9,10 @@
 
 class Redactor:
     
-    def __redact__(self, find, num): 
-        list_1 = reade()
-        red = input('Кого редактировать?\n: ')
-        find = list(filter(lambda x: red in x[0], list_1))
+    def __redact__(self, find, num):  
+        list_1 = read()
+        edit = input('Кого редактировать?\n: ')
+        find = list(filter(lambda x: edit in x[0], list_1))
         if len(find) != 0:
             for i in find: 
                 print(i)
@@ -21,30 +21,30 @@ class Redactor:
             outlog()
         if len(find) == 1:
             for i in find: 
-                uno = input('Изменить ФИО-1, телефон-2\n: ')
-                if uno == '1':
-                    list_1[list_1.index(i)][0] = input('ФИО: ') # Разделить имя и фамилию (?)
-                elif uno == '2':
+                change = input('Изменить ФИО-1, телефон-2\n: ')
+                if change == '1':
+                    list_1[list_1.index(i)][0] = input('ФИО: ') 
+                elif change == '2':
                     list_1[list_1.index(i)][1] = input('Телефон: ')
                 else: 
                     print('Введена неверная команда')
                     redact() 			
-        bum = 0
+        choice = 0
         if len(find) > 1: 
             num = input('Введите номер телефона: ') 
             for j in find: 	
                 # print(num, j[1])
                 if num == j[1]:
-                    uno = input('Изменить: ФИ - 1, телефон - 2 ')
-                    if uno == '1':
-                        list_1[list_1.index(j)][0] = input('ФИ: ')
-                    elif uno == '2':
+                    change = input('Изменить: ФИО - 1, телефон - 2 ')
+                    if change == '1':
+                        list_1[list_1.index(j)][0] = input('ФИО: ')
+                    elif change == '2':
                         list_1[list_1.index(j)][1] = input('Телефон: ')
                     else:
                         print('Введена неверная команда')
                         redact()
-                else: bum += 1
-            if len(find) == bum: 
+                else: choice += 1
+            if len(find) == choice: 
                 print('Такого номера нет')
         create(list_1)
-        outlog()	
+        outlog()
