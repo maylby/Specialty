@@ -8,10 +8,10 @@
 class AddContact:
 
     def __addName__(self, name, num):
-        list_1 = reade()
-        saves = input('Создать контакт?\nда-1\nнет-2\n ')
-        list_2 =[]
-        if saves == '1':
+        list_1 = read()
+        adds = input('Создать контакт?\n1 - да\n2 - нет\n')
+        list_2 = []
+        if adds == '1':
             name = input('Введите новое ФИO: ')
             list_2.append(name)
             num = input('Введите номер телефона: ')
@@ -20,10 +20,10 @@ class AddContact:
                 print('Такой номер и ФИO уже есть')
             else:
                 list_1.append(list_2)
-                create(list_1)
+                create(list_1) # вызов функции "Создание новой записи"
                 print('Контакт добавлен')
                 outlog()
-        elif saves == '2':
+        elif adds == '2':
             outlog()
         else:
             print('Введена неверная команда')

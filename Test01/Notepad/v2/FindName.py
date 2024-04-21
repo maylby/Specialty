@@ -8,19 +8,19 @@
 class FindName:
 
     def __findName__(self, name, nike):
-        list_1 = reade() # чтение найденных данных
+        list_1 = read()
         name = input('Введите ФИО: ')
-        filde = list(filter(lambda x: name in x[0], list_1))
-        if len(filde): # != 0:
-            for i in filde:
+        field = list(filter(lambda x: name in x[0], list_1))
+        if len(field):
+            for i in field:
                 print(i)
                 outlog()
         else:
-            nike = input('ФИО нет в списке контактов. Добавить?\n1-да\n2-нет\n: ')
-            if nike == '1':
-                add_name() # Добавить новый контакт
-            if nike == '2':
-                outlog() # возврат на страницу "Входа"
+            reque = input('ФИО нет в списке контактов. Добавить?\n1-да\n2-нет\n: ')
+            if reque == '1':
+                add_name() # вызов функции "Добавление контакта"
+            if reque == '2':
+                outlog() # возврат в пункт "Вход/Выход"
             else:
                 print('Введена не верная команда')
                 outlog()

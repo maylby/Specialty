@@ -154,7 +154,7 @@ def add_name():
 '''
 def create(list_1):
 	listes = list_1
-	with open('phonebook.txt','w+', encoding='utf-8') as Phone:
+	with open('notelog.txt','w+', encoding='utf-8') as Phone:
 		for i in listes:
 			Phone.write(f'{i[0]},{i[1]}\n') # ФИО: 'i[0]', номер: 'i[1]'
 		list_1 += listes
@@ -167,7 +167,7 @@ def create(list_1):
 '''
 def read(): 
 	note = []
-	with open('phonebook.txt','r', encoding='utf-8') as Phone:
+	with open('notelog.txt','r', encoding='utf-8') as Phone:
 		for i in Phone.readlines():
 			note.append(i.strip().split(',')) 	
 	return (note)

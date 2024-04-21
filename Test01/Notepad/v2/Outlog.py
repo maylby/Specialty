@@ -9,10 +9,10 @@
 class Outlog:
 
     def __outlog__(self, picachu):
-        picachu = input('\nПродолжить?\n1-да,\n2-нет\n: ')
-        if picachu == '1': 
-            start() # меню выбора действий
-        elif picachu == '2':
+        action = input('\nПродолжить?\n1-да,\n2-нет\n: ')
+        if action == '1': 
+            start() # функция выбора действий
+        elif action == '2':
             print('Пока!\n')
             exit() 
         else: 
