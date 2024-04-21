@@ -53,18 +53,18 @@ def delete():
 	list_1 = read()
 	name = input('Введите ФИО: ')
 	len_list_1 = len(list_1)
-	removal = []
+	deletion = []
 	for i in list_1:
 		if name in i[0]:
-			removal.append(i)
-	if len(removal) != 0: print(*removal, sep ='\n')		
-	if len(removal) == 1:
-		list_1.remove(removal[0])
+			deletion.append(i)
+	if len(deletion) != 0: print(*deletion, sep ='\n')		
+	if len(deletion) == 1:
+		list_1.remove(deletion[0])
 		create(list_1)
 		outlog()
-	elif len(removal) > 1:
+	elif len(deletion) > 1:
 		num = input('Введите номер телефона: ')
-		for j in removal:
+		for j in deletion:
 			if num == j[1]:
 				list_1.remove(j)
 				create(list_1)
@@ -82,8 +82,8 @@ def delete():
 '''
 def redact(): 
 	list_1 = read()
-	red = input('Кого редактировать?\n: ')
-	find = list(filter(lambda x: red in x[0], list_1))
+	edit = input('Кого редактировать?\n: ')
+	find = list(filter(lambda x: edit in x[0], list_1))
 	if len(find) != 0:
 		for i in find: 
 			print(i)
