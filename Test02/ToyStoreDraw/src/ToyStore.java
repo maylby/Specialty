@@ -27,11 +27,9 @@ public class ToyStore {
             Logger logger = new Logger();
             logger.getLogger(randomToy);
             return randomToy;
-            } else {
-            return null;
-        }
-
+        } else return null;
     }
+    
     public void FileWriter(Toy ToyStore) throws IOException {
         try {
             FileWriter writer = new FileWriter("log.txt", true);
