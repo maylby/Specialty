@@ -96,6 +96,7 @@ public class Orders {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSoftToy(), getDoll(), getBoardGame(), getConstructor(), getWeapons());
+        return Objects.hash(getSoftToy(), getDoll(), getBoardGame(), 
+                            getConstructor(), getWeapons());
     }
 }
