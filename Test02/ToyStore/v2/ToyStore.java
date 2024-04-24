@@ -1,6 +1,8 @@
 /*
  * Промежуточная контрольная работа по блоку специализация
- * https://gb.ru/lessons/432765/homework
+ * Программа для онлайн-магазина детских игрушек. 
+ * https://gb.ru/lessons/432766/homework
+ * (компеляция одним файлом)
  */
 
 package Specialization.Test02.ToyStore.v2;
@@ -188,7 +190,6 @@ public class ToyStore {
             choice = sc.nextInt();
         }
         return nums;
-
     }
 }
 
@@ -199,7 +200,7 @@ class ProductData {
         Map<String, Integer> softToys = new LinkedHashMap<>();
         SoftToys.put("Чебурашка", 1000);
         SoftToys.put("Панда", 3000);
-        SoftToys.put("Марышка", 2000);
+        SoftToys.put("Мартышка", 2000);
         SoftToys.put("Собака", 1000);
         SoftToys.put("Пингвин", 1000);
 
@@ -277,10 +278,6 @@ class ProductData {
 }
 
 
-/*
- * класс записан без "public"
- * (форма записи кода целиком в одном файле)
- */
 class Orders {
 
     private String softToy;
@@ -314,7 +311,6 @@ class Orders {
     public void setBoardGame(String boardGame) {
         this.boardGame = boardGame;
     }
-
 
     public String getConstructor() {
         return constructor;

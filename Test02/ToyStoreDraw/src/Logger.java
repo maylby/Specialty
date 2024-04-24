@@ -4,12 +4,10 @@ import java.io.IOException;
 public class Logger {
     FileWriter fileWriter;
 
-    {
-        try {
-            fileWriter = new FileWriter("log.txt", true);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    try {
+        fileWriter = new FileWriter("log.txt", true);
+    } catch (IOException e) {
+        throw new RuntimeException(e);
     }
 
     public void getLogger(Toy toy) throws IOException {
@@ -19,8 +17,7 @@ public class Logger {
             fileWriter.write("ToyStore is empty" + "\n");
         }
         fileWriter.flush();
-
     }
-
-
 }
+
+

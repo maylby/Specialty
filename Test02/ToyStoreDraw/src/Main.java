@@ -28,10 +28,6 @@ public class Main {
         System.out.println(toyStore.getToy());
         System.out.println(toyStore.getToy());
         System.out.println(toyStore.getToy());
-
-
-
+        
     }
-
-
 }

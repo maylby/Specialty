@@ -1,7 +1,7 @@
 /*
  * Промежуточная контрольная работа по блоку специализация
  * Программа для онлайн-магазина детских игрушек. 
- * https://gb.ru/lessons/432765/homework
+ * https://gb.ru/lessons/432766/homework
  */
 package Specialization.Test02.ToyStore.v1;
 

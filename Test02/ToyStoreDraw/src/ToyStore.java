@@ -27,7 +27,8 @@ public class ToyStore {
             Logger logger = new Logger();
             logger.getLogger(randomToy);
             return randomToy;
-        } else return null;
+        } 
+        return null;
     }
     
     public void FileWriter(Toy ToyStore) throws IOException {
@@ -41,8 +42,4 @@ public class ToyStore {
 
         System.out.println("The toy is: " + getToy().getWeight());
     }
-
-
 }
-
-

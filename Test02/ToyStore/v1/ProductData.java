@@ -85,8 +85,8 @@ public class ProductData {
             String weapon = (String) weapons.keySet().toArray()[randIndex];
             price += weapons.get(weapon);
 	    
-	    // как указать, что количество элементов произвольное, чтобы
-	    // добавлять, только выбранное, пропуская остальное???
+	    // как указать, что количество элементов произвольное,
+	    // добавляя, только выбранное, и пропуская остальное???
             orders.add(new Orders(softToy, doll, boardGame, constructor, weapon, price));
         }
         return orders;
