@@ -16,7 +16,6 @@ https://gb.ru/lessons/432766/homework
 возможность изменения веса (частоты выпадения игрушки)
 Возможность организовать розыгрыш игрушек.
 
-
  */
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,18 +32,23 @@ public class Main {
                 new Toy(1, "Конструктор", 20),
                 new Toy(2, "Робот", 20),
                 new Toy(3, "Кукла", 60)));
+
         ArrayList<Toy> toys2 = new ArrayList<>(List.of(
                 new Toy(1, "Конструктор", 20),
                 new Toy(2, "Робот", 20),
                 new Toy(3, "Кукла", 60)));
+
         ArrayList<Toy> toys3 = new ArrayList<>(List.of(
                 new Toy(1, "Конструктор", 20),
                 new Toy(2, "Робот", 20),
                 new Toy(3, "Кукла", 60)));
+
         ToyStore toyStore = new ToyStore();
+
         toyStore.put(toys1);
         toyStore.put(toys2);
         toyStore.put(toys3);
+
         System.out.println(toyStore.getToy());
         System.out.println(toyStore.getToy());
         System.out.println(toyStore.getToy());
