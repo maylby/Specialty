@@ -12,7 +12,7 @@ import java.util.List;
  * MatchWords
  * подсчёт и печать повторяющихся слов
  */
-pablic class MatchWords {
+public class MatchWords {
 
 	private static void matchWords(List<String> listWords) {
 		List<String> sortedWords = new ArrayList<>(listWords);
