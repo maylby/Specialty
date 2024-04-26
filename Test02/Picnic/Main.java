@@ -23,19 +23,18 @@ import java.util.Collections;
 import java.util.List;
 
 public class Main {
-	// Возможно, вызовы методов нужно будет поместить в "public" (см. ООП)
-
+    
 	public static void main(String[] args) {
-		List<String> words = getWords(); // прередать (как?) в список 
-						                 // слова из файла "Input.txt"
-		wordCount(count);
+		List<String> words = getWords(); // прередать список слов из "Input.txt"
+
+		wordCount(count); // метод подсчёта количества слов
 		System.out.println(count);
 
-		maxWordLength(mwl);
+		maxWordLength(mwl); // метод поиска самого длинного слова 
 		System.out.println(mwl);
 
-		matchWords(words); // вызов метода записи слов
-		System.out.println(words); // печатать список слов
+		matchWords(words); // метод поиска совпадений
+		System.out.println(words); 
 	}
 	
 	private static List<String> getWords() {
