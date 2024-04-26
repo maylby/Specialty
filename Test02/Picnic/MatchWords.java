@@ -28,7 +28,6 @@ pablic class MatchWords {
 				currentWord = sortedWords.get(i);
 			}
 		}
-		System.out.println(currentWord + " -> " + count); // вывод последнего слова, 
-								                          // до которого цикл не дойдёт
+		System.out.println(currentWord + " -> " + count); // вывод последнего слова
 	}
 }
