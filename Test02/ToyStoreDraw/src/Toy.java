@@ -1,6 +1,8 @@
 /*
- * PrizeToy
- * другое название класса и метода
+Промежуточная контрольная работа по блоку специализация
+Урок 2. "Магазин игрушек" (Java)
+https://gb.ru/lessons/432766/homework
+
  */
 public class Toy {
     private int id;

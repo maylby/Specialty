@@ -1,3 +1,9 @@
+/*
+Промежуточная контрольная работа по блоку специализация
+Урок 2. "Магазин игрушек" (Java)
+https://gb.ru/lessons/432766/homework
+
+ */
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
