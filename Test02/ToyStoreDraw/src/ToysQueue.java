@@ -5,15 +5,10 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
 
-
-/*
- * ToysQueue 
- * другое название класса и метода
- */
-public class ToyStore {
+public class ToysQueue {
     private final PriorityQueue<ArrayList<Toy>> queue;
 
-    public ToyStore() {
+    public ToysQueue() {
         queue = new PriorityQueue<>((t1, t2) -> t2.getFirst().getWeight() - t1.getFirst().getWeight());
     }
 
