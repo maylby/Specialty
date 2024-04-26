@@ -5,6 +5,11 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
 
+
+/*
+ * ToysQueue 
+ * другое название класса и метода
+ */
 public class ToyStore {
     private final PriorityQueue<ArrayList<Toy>> queue;
 

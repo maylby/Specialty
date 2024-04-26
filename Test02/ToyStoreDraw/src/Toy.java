@@ -1,3 +1,7 @@
+/*
+ * PrizeToy
+ * другое название класса и метода
+ */
 public class Toy {
     private int id;
     private String name;
