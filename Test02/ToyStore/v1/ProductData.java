@@ -6,6 +6,13 @@
 
 package Specialization.Test02.ToyStore.v1;
 
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeMap;
+
 /*
  * ProductData
  * (перечень представленных товаров по разделам)
@@ -14,18 +21,18 @@ public class ProductData {
     static Set<Orders> createOrdersSet() {
 
         Map<String, Integer> softToys = new LinkedHashMap<>();
-        SoftToys.put("Чебурашка", 1000);
-        SoftToys.put("Панда", 3000);
-        SoftToys.put("Марышка", 2000);
-        SoftToys.put("Собака", 1000);
-        SoftToys.put("Пингвин", 1000);
+        softToys.put("Чебурашка", 1000);
+        softToys.put("Панда", 3000);
+        softToys.put("Марышка", 2000);
+        softToys.put("Собака", 1000);
+        softToys.put("Пингвин", 1000);
 
-        Map<String, Integer> Dolls = new LinkedHashMap<>();
+        Map<String, Integer> dolls = new LinkedHashMap<>();
         dolls.put("Барби", 4000);
         dolls.put("Пупс", 3000);
         dolls.put("Авторская кукла", 14000);
 
-        Map<String, Integer> BoardGames = new TreeMap<>();
+        Map<String, Integer> boardGames = new TreeMap<>();
         boardGames.put("Кубики", 1000);
         boardGames.put("Головоломка", 1000);
         boardGames.put("Настольня игра", 3000);
@@ -40,22 +47,22 @@ public class ProductData {
         boardGames.put("Футбол", 6000);
         boardGames.put("Бильярд", 10000);
 
-        Map<String, Integer> Constructors = new LinkedHashMap<>();
-        Constructors.put("Скворечник", 500);
-        Constructors.put("Дом", 500);
-        Constructors.put("Паровоз", 700);
-        Constructors.put("Lego", 1000);
-        Constructors.put("Машина", 2000);
-        Constructors.put("Шкатулка", 2000);
-	Constructors.put("Мозаика", 200);
+        Map<String, Integer> constructors = new LinkedHashMap<>();
+        constructors.put("Скворечник", 500);
+        constructors.put("Дом", 500);
+        constructors.put("Паровоз", 700);
+        constructors.put("Lego", 1000);
+        constructors.put("Машина", 2000);
+        constructors.put("Шкатулка", 2000);
+	constructors.put("Мозаика", 200);
 
-        Map<String, Integer> Weapons = new LinkedHashMap<>();
-        Weapons.put("Автомат", 1500);
-        Weapons.put("Винтовка", 1500);
-        Weapons.put("Пистолет", 1000);
-        Weapons.put("Ружьё", 500);
-        Weapons.put("Нож", 300);
-        Weapons.put("Меч", 300);
+        Map<String, Integer> weapons = new LinkedHashMap<>();
+        weapons.put("Автомат", 1500);
+        weapons.put("Винтовка", 1500);
+        weapons.put("Пистолет", 1000);
+        weapons.put("Ружьё", 500);
+        weapons.put("Нож", 300);
+        weapons.put("Меч", 300);
 
 
         Set<Orders> orders = new HashSet<>();
@@ -65,7 +72,7 @@ public class ProductData {
 
             Random r = new Random();
 
-            randIndex = r.nextInt(softToys.size());
+            int randIndex = r.nextInt(softToys.size());
             String softToy = (String) softToys.keySet().toArray()[randIndex];
             price += softToys.get(softToy);
 

@@ -20,7 +20,7 @@ https://gb.ru/lessons/432766/homework
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
+// import java.util.logging.Logger;
 
 public class Main {
 
@@ -43,7 +43,7 @@ public class Main {
                 new Toy(2, "Робот", 20),
                 new Toy(3, "Кукла", 60)));
 
-        ToyStore toyStore = new ToyStore();
+        ToysQueue toyStore = new ToysQueue();
 
         toyStore.put(toys1);
         toyStore.put(toys2);

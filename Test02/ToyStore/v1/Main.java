@@ -5,12 +5,18 @@
  */
 package Specialization.Test02.ToyStore.v1;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /*
  * Main
@@ -30,7 +36,7 @@ public class Main {
         Set<Orders> filterOrders = new HashSet<>(orders);
         printOrders(filterOrders);
         int choice = chooseMainOptions();
-        while (choice != case.length) { // "вместо числа пунктов вставить (?) 
+        while (choice != 9) { // "вместо числа пунктов вставить (?) 
                                         // "orders.length" или "case.length"
             switch (choice) {
                 case 1:
@@ -97,37 +103,37 @@ public class Main {
     static void filterSoftToys(Set<Orders> orders) {
         Set<String> options = new LinkedHashSet<>();
         for (Orders ord : orders) {
-            options.add(ord.getSoftToys());
+            options.add(ord.getSoftToy());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getSoftToys()));
+        orders.removeIf(ord -> !options.contains(ord.getSoftToy()));
     }
 
     static void filterDolls(Set<Orders> orders) {
         Set<String> options = new LinkedHashSet<>();
         for (Orders ord : orders) {
-            options.add(n.getDolls());
+            options.add(ord.getDoll());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getDolls()));
+        orders.removeIf(ord -> !options.contains(ord.getDoll()));
     }
 
     static void filterBoardGames(Set<Orders> orders) {
         Set<String> options = new TreeSet<>();
         for (Orders ord : orders) {
-            options.add(ord.getBoardGames());
+            options.add(ord.getBoardGame());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getBoardGames()));
+        orders.removeIf(ord -> !options.contains(ord.getBoardGame()));
     }
 
     static void filterConstructors(Set<Orders> orders) {
         Set<String> options = new LinkedHashSet<>();
         for (Orders ord : orders) {
-            options.add(ord.getConstructors());
+            options.add(ord.getConstructor());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getConstructors()));
+        orders.removeIf(ord -> !options.contains(ord.getConstructor()));
     }
 
     static void filterWeapons(Set<Orders> orders) {
@@ -155,7 +161,7 @@ public class Main {
             priceRange.add(sc.nextInt());
             System.out.println("Значения диапазона цен: " + priceRange);
         }
-        laptops.removeIf(n ->
+        orders.removeIf(ord ->
                 (ord.getPrice() < Collections.min(priceRange)) ||
                 (ord.getPrice() > Collections.max(priceRange)));
     }

@@ -5,7 +5,7 @@
  */
 package Specialization.Test02.ToyStore.v1;
 
-import java.util.*; 
+// import java.util.*; 
 import java.util.Objects;
 
 public class Orders {
@@ -21,14 +21,12 @@ public class Orders {
     }
 
     public void setSoftToy(String softToy) {
-        this.cpu = softToy;
+        this.softToy = softToy;
     }
 
     public String getDoll() {
         return doll;
-
     }
-
     public void setDoll(String doll) {
         this.doll = doll;
     }
@@ -36,27 +34,31 @@ public class Orders {
     public String getBoardGame() {
         return boardGame;
     }
-
     public void setBoardGame(String boardGame) {
         this.boardGame = boardGame;
     }
 
-
     public String getConstructor() {
         return constructor;
     }
-
     public void setConstructor(String constructor) {
         this.constructor = constructor;
+    }
+
+    public String getWeapons() {
+        return weapons;
+    }
+    public void setWeapons(String weapons) {
+        this.weapons = weapons;
     }
 
     public int getPrice() {
         return price;
     }
-
     public void setPrice(int price) {
         this.price = price;
     }
+
 
     public Orders(String softToy, String doll, String boardGame, 
 		   String constructor, String weapons, int price ) {
