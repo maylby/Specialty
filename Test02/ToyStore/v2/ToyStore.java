@@ -9,13 +9,18 @@ package Specialization.Test02.ToyStore.v2;
 
 // import java.util.*; 
 import java.util.Objects;
-
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 /*
  * "ToyStore"
@@ -102,37 +107,37 @@ public class ToyStore {
     static void filterSoftToys(Set<Orders> orders) {
         Set<String> options = new LinkedHashSet<>();
         for (Orders ord : orders) {
-            options.add(ord.getSoftToys());
+            options.add(ord.getSoftToy());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getSoftToys()));
+        orders.removeIf(ord -> !options.contains(ord.getSoftToy()));
     }
 
     static void filterDolls(Set<Orders> orders) {
         Set<String> options = new LinkedHashSet<>();
         for (Orders ord : orders) {
-            options.add(n.getDolls());
+            options.add(ord.getDoll());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getDolls()));
+        orders.removeIf(ord -> !options.contains(ord.getDoll()));
     }
 
     static void filterBoardGames(Set<Orders> orders) {
         Set<String> options = new TreeSet<>();
         for (Orders ord : orders) {
-            options.add(ord.getBoardGames());
+            options.add(ord.getBoardGame());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getBoardGames()));
+        orders.removeIf(ord -> !options.contains(ord.getBoardGame()));
     }
 
     static void filterConstructors(Set<Orders> orders) {
         Set<String> options = new LinkedHashSet<>();
         for (Orders ord : orders) {
-            options.add(ord.getConstructors());
+            options.add(ord.getConstructor());
         }
         filterOptions(options);
-        orders.removeIf(ord -> !options.contains(ord.getConstructors()));
+        orders.removeIf(ord -> !options.contains(ord.getConstructor()));
     }
 
     static void filterWeapons(Set<Orders> orders) {
@@ -160,7 +165,7 @@ public class ToyStore {
             priceRange.add(sc.nextInt());
             System.out.println("Значения диапазона цен: " + priceRange);
         }
-        laptops.removeIf(n ->
+        orders.removeIf(ord ->
                 (ord.getPrice() < Collections.min(priceRange)) ||
                 (ord.getPrice() > Collections.max(priceRange)));
     }
@@ -198,18 +203,18 @@ class ProductData {
     static Set<Orders> createOrdersSet() {
 
         Map<String, Integer> softToys = new LinkedHashMap<>();
-        SoftToys.put("Чебурашка", 1000);
-        SoftToys.put("Панда", 3000);
-        SoftToys.put("Мартышка", 2000);
-        SoftToys.put("Собака", 1000);
-        SoftToys.put("Пингвин", 1000);
+        softToys.put("Чебурашка", 1000);
+        softToys.put("Панда", 3000);
+        softToys.put("Мартышка", 2000);
+        softToys.put("Собака", 1000);
+        softToys.put("Пингвин", 1000);
 
-        Map<String, Integer> Dolls = new LinkedHashMap<>();
+        Map<String, Integer> dolls = new LinkedHashMap<>();
         dolls.put("Барби", 4000);
         dolls.put("Пупс", 3000);
         dolls.put("Авторская кукла", 14000);
 
-        Map<String, Integer> BoardGames = new TreeMap<>();
+        Map<String, Integer> boardGames = new TreeMap<>();
         boardGames.put("Кубики", 1000);
         boardGames.put("Головоломка", 1000);
         boardGames.put("Настольня игра", 3000);
@@ -224,22 +229,22 @@ class ProductData {
         boardGames.put("Футбол", 6000);
         boardGames.put("Бильярд", 10000);
 
-        Map<String, Integer> Constructors = new LinkedHashMap<>();
-        Constructors.put("Скворечник", 500);
-        Constructors.put("Дом", 500);
-        Constructors.put("Паровоз", 700);
-        Constructors.put("Lego", 1000);
-        Constructors.put("Машина", 2000);
-        Constructors.put("Шкатулка", 2000);
-	Constructors.put("Мозаика", 200);
+        Map<String, Integer> constructors = new LinkedHashMap<>();
+        constructors.put("Скворечник", 500);
+        constructors.put("Дом", 500);
+        constructors.put("Паровоз", 700);
+        constructors.put("Lego", 1000);
+        constructors.put("Машина", 2000);
+        constructors.put("Шкатулка", 2000);
+	constructors.put("Мозаика", 200);
 
-        Map<String, Integer> Weapons = new LinkedHashMap<>();
-        Weapons.put("Автомат", 1500);
-        Weapons.put("Винтовка", 1500);
-        Weapons.put("Пистолет", 1000);
-        Weapons.put("Ружьё", 500);
-        Weapons.put("Нож", 300);
-        Weapons.put("Меч", 300);
+        Map<String, Integer> weapons = new LinkedHashMap<>();
+        weapons.put("Автомат", 1500);
+        weapons.put("Винтовка", 1500);
+        weapons.put("Пистолет", 1000);
+        weapons.put("Ружьё", 500);
+        weapons.put("Нож", 300);
+        weapons.put("Меч", 300);
 
 
         Set<Orders> orders = new HashSet<>();
@@ -249,7 +254,7 @@ class ProductData {
 
             Random r = new Random();
 
-            randIndex = r.nextInt(softToys.size());
+            int randIndex = r.nextInt(softToys.size());
             String softToy = (String) softToys.keySet().toArray()[randIndex];
             price += softToys.get(softToy);
 
@@ -292,7 +297,7 @@ class Orders {
     }
 
     public void setSoftToy(String softToy) {
-        this.cpu = softToy;
+        this.softToy = softToy;
     }
 
     public String getDoll() {
@@ -318,6 +323,13 @@ class Orders {
 
     public void setConstructor(String constructor) {
         this.constructor = constructor;
+    }
+
+    public String getWeapons() {
+        return weapons;
+    }
+    public void setWeapons(String weapons) {
+        this.weapons = weapons;
     }
 
     public int getPrice() {
